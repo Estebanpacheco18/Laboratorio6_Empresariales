@@ -1,6 +1,8 @@
+using Lab06_EstebanPacheco.DTOs;
+using Lab06_EstebanPacheco.Models;
+
 namespace Lab06_EstebanPacheco.Controllers;
 
-using DTOs;
 using Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,10 +25,24 @@ public class AdminController : ControllerBase
     }
 
     [HttpPost("users")]
-    public IActionResult CreateUser([FromBody] UserDto userDto)
+    public IActionResult CreateUser([FromBody] UserRequestDto dto)
     {
-        var user = _userService.CreateUser(userDto);
-        return CreatedAtAction(nameof(GetAllUsers), new { id = user.Id }, user);
+        if (string.IsNullOrEmpty(dto.Password))
+        {
+            return BadRequest("La contraseña es obligatoria.");
+        }
+
+        var user = new UserDto
+        {
+            Id = dto.Id,
+            Username = dto.Username,
+            Role = dto.Role,
+            Password = dto.Password // Asignar la contraseña
+        };
+
+        _userService.CreateUser(user);
+
+        return Ok("Usuario creado exitosamente.");
     }
 
     [HttpDelete("users/{id}")]

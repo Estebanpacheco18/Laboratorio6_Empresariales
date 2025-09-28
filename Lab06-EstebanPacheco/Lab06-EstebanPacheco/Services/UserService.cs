@@ -46,7 +46,8 @@ public class UserService : IUserService
         {
             Id = user.Id,
             Username = user.Username,
-            Role = user.Role
+            Role = user.Role,
+            Password = user.Password
         });
     }
 
@@ -64,7 +65,8 @@ public class UserService : IUserService
         {
             Id = user.Id,
             Username = user.Username,
-            Role = user.Role
+            Role = user.Role,
+            Password = user.Password
         };
     }
 
@@ -86,7 +88,8 @@ public class UserService : IUserService
         {
             Id = user.Id,
             Username = user.Username,
-            Role = user.Role
+            Role = user.Role,
+            Password = user.Password
         };
     }
 }

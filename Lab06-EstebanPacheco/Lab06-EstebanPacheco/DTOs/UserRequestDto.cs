@@ -1,6 +1,6 @@
 namespace Lab06_EstebanPacheco.DTOs;
 
-public class UserDto
+public class UserRequestDto
 {
     public int Id { get; set; }
     public string Username { get; set; }
