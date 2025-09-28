@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CSharp\\Laboratorio6_Empresariales\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco.csproj": {}
+    "C:\\Users\\esteb\\Documents\\GitHub\\Laboratorio6_Empresariales\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco.csproj": {}
   },
   "projects": {
-    "D:\\CSharp\\Laboratorio6_Empresariales\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco.csproj": {
+    "C:\\Users\\esteb\\Documents\\GitHub\\Laboratorio6_Empresariales\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CSharp\\Laboratorio6_Empresariales\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco.csproj",
+        "projectUniqueName": "C:\\Users\\esteb\\Documents\\GitHub\\Laboratorio6_Empresariales\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco.csproj",
         "projectName": "Lab06-EstebanPacheco",
-        "projectPath": "D:\\CSharp\\Laboratorio6_Empresariales\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco.csproj",
+        "projectPath": "C:\\Users\\esteb\\Documents\\GitHub\\Laboratorio6_Empresariales\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco.csproj",
         "packagesPath": "C:\\Users\\esteb\\.nuget\\packages\\",
-        "outputPath": "D:\\CSharp\\Laboratorio6_Empresariales\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco\\obj\\",
+        "outputPath": "C:\\Users\\esteb\\Documents\\GitHub\\Laboratorio6_Empresariales\\Lab06-EstebanPacheco\\Lab06-EstebanPacheco\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\esteb\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -44,6 +44,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.9, )"
