@@ -1,5 +1,4 @@
 using Lab06_EstebanPacheco.DTOs;
-using Lab06_EstebanPacheco.Models;
 
 namespace Lab06_EstebanPacheco.Controllers;
 
@@ -34,15 +33,14 @@ public class AdminController : ControllerBase
 
         var user = new UserDto
         {
-            Id = dto.Id,
             Username = dto.Username,
             Role = dto.Role,
             Password = dto.Password // Asignar la contraseña
         };
 
-        _userService.CreateUser(user);
+        var createdUser = _userService.CreateUser(user);
 
-        return Ok("Usuario creado exitosamente.");
+        return Ok(createdUser);
     }
 
     [HttpDelete("users/{id}")]

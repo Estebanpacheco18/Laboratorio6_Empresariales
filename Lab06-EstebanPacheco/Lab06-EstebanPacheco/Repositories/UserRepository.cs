@@ -15,10 +15,11 @@ public class UserRepository : IUserRepository
 
     public Task<User> GetByIdAsync(int id) => Task.FromResult(_users.FirstOrDefault(u => u.Id == id));
 
-    public Task AddAsync(User entity)
+    public Task<User> AddAsync(User entity)
     {
+        entity.Id = _users.Any() ? _users.Max(u => u.Id) + 1 : 1;
         _users.Add(entity);
-        return Task.CompletedTask;
+        return Task.FromResult(entity);
     }
 
     public Task UpdateAsync(User entity) => Task.CompletedTask;

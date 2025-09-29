@@ -57,16 +57,16 @@ public class UserService : IUserService
         {
             Username = userDto.Username,
             Role = userDto.Role,
-            Password = "defaultPassword" // Contraseña predeterminada
+            Password = userDto.Password
         };
-
-        _userRepository.AddAsync(user).Wait();
+        
+        var createdUser = _userRepository.AddAsync(user).Result;
         return new UserDto
         {
-            Id = user.Id,
-            Username = user.Username,
-            Role = user.Role,
-            Password = user.Password
+            Id = createdUser.Id,
+            Username = createdUser.Username,
+            Role = createdUser.Role,
+            Password = createdUser.Password
         };
     }
 
